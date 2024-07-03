@@ -2,18 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JobManager : MonoBehaviour
+public class Select_playerjob : MonoBehaviour
 {
-    ClickButton cb;
+    bool firstin=false;
     [SerializeField] public List<GameObject> selectPlayerJob;
     int[] checknum = new int[3];
-    void Awake()
+    void OnEnable()
     {
-        if (cb.clickbool)
-        {
-            initgameobj();
-        }   
-            RandomJob();
+        InitJobSelect();
+        RandomJob();
         
     }
     /// <summary>
@@ -25,7 +22,7 @@ public class JobManager : MonoBehaviour
         for (int indexa = 0; indexa < 3; indexa++)
         {
             checknum[indexa] = Random.Range(0, selectPlayerJob.Count);
-            Debug.Log($"{checknum[indexa]}");
+
         }
         CheckRandomJob();
 
@@ -60,17 +57,19 @@ public class JobManager : MonoBehaviour
         for (int i  = 0; i<3; i++)
         {
             selectPlayerJob[checknum[i]].SetActive(true);
+            firstin = true;
         }
         
     }
-    /// <summary>
-    /// 만약 전에 만든게있으면 초기화 시킴
-    /// </summary>
-    void initgameobj()
+    void InitJobSelect()
     {
-        for (int i = 0; i < 3; i++)
+        if (firstin)
         {
-            selectPlayerJob[checknum[i]].SetActive(false);
+            for (int i = 0; i < 3; i++)
+            {
+                selectPlayerJob[checknum[i]].SetActive(false);
+            }
+            firstin = false;
         }
     }
 }
