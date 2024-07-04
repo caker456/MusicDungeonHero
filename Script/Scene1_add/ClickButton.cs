@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ClickButton : MonoBehaviour
 {
     string jobname_Image;
-    int[] jobcount = new int[4];
     int jobnamepointer = 0;
     int pointer=0;
     Image jobimage;
     [SerializeField] List<GameObject> Inv;
     [SerializeField] GameObject selectjob;
-
+    /// <summary>
+    /// 클릭하면 인벤토리에 저장
+    /// </summary>
     public void OnClickToJob()
     {
         jobname_Image = selectjob.transform.GetChild(jobnamepointer).name + "_Image";
@@ -31,7 +33,17 @@ public class ClickButton : MonoBehaviour
 
     void CheckJobInv()
     {
-
+        for (int front = 0; front < 4; front++) 
+        {
+            for(int back = 0; back < 4; back++)
+            {
+                if (Inv[front].GetComponent<Image>().sprite == Inv[back].GetComponent<Image>().sprite)
+                {
+                    
+                }
+                
+            }
+        }
     }
 
   /// <summary>
