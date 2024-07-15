@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
+    [Header("뮤직 노드 싱크 크기")]
+    [SerializeField] float[] sizeCir = new float[7];
+
+
     [SerializeField] List<GameObject> soundGameObj;
     [SerializeField] GameObject musicNodeBackground;
     [SerializeField] GameObject startGo;
@@ -12,6 +16,7 @@ public class MusicManager : MonoBehaviour
 
     void Update()
     {
+
         CheckStartText();
 
     }
@@ -27,10 +32,12 @@ public class MusicManager : MonoBehaviour
     {
         for (int i =0; i<7;i++)
         {
-
+            //뮤직노드의 원이 켜져있다면!
             if (musicNodeBackground.transform.GetChild(i).gameObject.activeSelf
                 && musicNodeBackground.transform.GetChild(i).GetChild(1).gameObject.activeSelf)
             {
+                musicNodeBackground.transform.GetChild(i).GetChild(1).transform.localScale =
+                   new Vector3(sizeCir[i], sizeCir[i], 0);
                 MusicInputData(i);
                 keybool[i] = true;
             }
