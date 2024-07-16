@@ -152,14 +152,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d663bd2b5da18374e8b513fb714b5271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizeCir:
-  - 10
-  - 5
-  - 1
-  - 2
-  - 2
-  - 2
-  - 4
+  musicSize:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   soundGameObj:
   - {fileID: 988545357}
   musicNodeBackground: {fileID: 1912660522}
@@ -771,6 +770,24 @@ Transform:
   m_Father: {fileID: 1597355171}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1376196764 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2062259338094194048, guid: 99afaa416f84a5a4b83e7fe992a71090, type: 3}
+  m_PrefabInstance: {fileID: 8600066084868089965}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1376196767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376196764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0583bdc3ab60ec24ebf16f1e3a86eb75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicManager: {fileID: 171335659}
 --- !u!1 &1381878842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,8 +1851,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3300822877328485315, guid: 99afaa416f84a5a4b83e7fe992a71090, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2062259338094194048, guid: 99afaa416f84a5a4b83e7fe992a71090, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1376196767}
   m_SourcePrefab: {fileID: 100100000, guid: 99afaa416f84a5a4b83e7fe992a71090, type: 3}
