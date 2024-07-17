@@ -8,27 +8,27 @@ public class Circle_Music : MonoBehaviour
 {
     [SerializeField]GameObject musicManager;
     [SerializeField] float speed;
-    [SerializeField]bool oncir;
+    [SerializeField]bool oncir,onClickValueKey;//부모가 켜져있는지 확인하는 변수 , key입력 클릭변수
     float cirTimer;
     int parentnum;
-    TextMeshPro tmp;
+    TMP_Text tmp;
     void OnEnable()
     {
+        //부모가 실행되었을때 시작
         if (transform.parent.gameObject.activeSelf)
         {
+            tmp = transform.parent.GetChild(0).GetComponent<TMP_Text>();
             parentnum = Int32.Parse((transform.parent.name.Substring(16, 1))) - 1;
             oncir = true;
             cirTimer = musicManager.GetComponent<MusicManager>().musicSize[parentnum];
         }
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         CirScaleTimer();
     }
-    
+    //부모가 켜져있다면! 시작
     void CirScaleTimer()
     {
 
@@ -40,6 +40,8 @@ public class Circle_Music : MonoBehaviour
                 KeycodeInputData();
             }
             Debug.Log(cirTimer);
+            
+            
             transform.localScale = new Vector3(cirTimer, cirTimer, 0f);
             cirTimer -= Time.deltaTime*speed;
             
@@ -49,26 +51,36 @@ public class Circle_Music : MonoBehaviour
         {
             transform.localScale = Vector3.zero;
             oncir = false;
+            onClickValueKey = false;
             gameObject.SetActive(false);
         }
     }
     //입력값이 뭔지
     void KeycodeInputData()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+
+        if (Input.inputString != "" && Input.GetKeyDown(KeyCode.Q))
         {
+            onClickValueKey = true;
+            tmp.text = "Q";
             Debug.Log("q입력");
         }
-        else if (Input.GetKeyDown(KeyCode.W))
+        else if (Input.inputString != "" && Input.GetKeyDown(KeyCode.W))
         {
+            onClickValueKey = true;
+            tmp.text = "W";
             Debug.Log("W입력");
         }
-        else if (Input.GetKeyDown(KeyCode.E))
+        else if (Input.inputString != "" && Input.GetKeyDown(KeyCode.E))
         {
+            onClickValueKey = true;
+            tmp.text = "E";
             Debug.Log("E입력");
         }
-        else if (Input.GetKeyDown(KeyCode.R))
+        else if (Input.inputString != "" && Input.GetKeyDown(KeyCode.R))
         {
+            onClickValueKey = true;
+            tmp.text = "R";
             Debug.Log("R입력");
         }
     }
