@@ -1,0 +1,12 @@
+{
+	"command": [
+		{ "Magic": "QWQR" },
+		{ "Sword": "WQWR" },
+		{ "Healer": "QQQR" },
+		{ "Hunter": "RRRQ" },
+		{ "Paladin": "QEQE" },
+		{ "Sheild": "WEWE" },
+		{ "Wooder": "QWWW" }
+	]
+	
+}

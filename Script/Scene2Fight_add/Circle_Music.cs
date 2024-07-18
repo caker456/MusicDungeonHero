@@ -58,30 +58,35 @@ public class Circle_Music : MonoBehaviour
     //입력값이 뭔지
     void KeycodeInputData()
     {
-
+      
         if (Input.inputString != "" && Input.GetKeyDown(KeyCode.Q))
         {
-            onClickValueKey = true;
             tmp.text = "Q";
+            onClickValueKey = true;
             Debug.Log("q입력");
         }
         else if (Input.inputString != "" && Input.GetKeyDown(KeyCode.W))
         {
-            onClickValueKey = true;
             tmp.text = "W";
+            onClickValueKey = true;
             Debug.Log("W입력");
         }
         else if (Input.inputString != "" && Input.GetKeyDown(KeyCode.E))
         {
-            onClickValueKey = true;
             tmp.text = "E";
+            onClickValueKey = true;
             Debug.Log("E입력");
         }
         else if (Input.inputString != "" && Input.GetKeyDown(KeyCode.R))
         {
-            onClickValueKey = true;
             tmp.text = "R";
+            onClickValueKey = true;
             Debug.Log("R입력");
+        }
+        else if(Input.inputString != "")
+        {
+            onClickValueKey = true;
+            Debug.Log("무언가를 입력");
         }
     }
 }
