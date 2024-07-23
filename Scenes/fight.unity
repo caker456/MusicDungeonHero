@@ -160,10 +160,10 @@ MonoBehaviour:
   - 13
   - 15
   - 17
+  speed: 0
   soundGameObj:
   - {fileID: 988545357}
   musicNodeBackground: {fileID: 1409668232943825966}
-  startGo: {fileID: 829533125}
 --- !u!4 &171335661
 Transform:
   m_ObjectHideFlags: 0
@@ -1014,22 +1014,6 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!114 &1376196767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7766193103658305005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0583bdc3ab60ec24ebf16f1e3a86eb75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicManager: {fileID: 171335659}
-  speed: 5
-  oncir: 0
-  onClickValueKey: 0
 --- !u!1 &1381878842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1853,7 +1837,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8288519696118049033}
   - component: {fileID: 1425248614956913068}
-  - component: {fileID: 8288519696118049034}
   m_Layer: 0
   m_Name: circle
   m_TagString: Untagged
@@ -2517,7 +2500,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2301440641504600715}
   - component: {fileID: 2752541443155606103}
-  - component: {fileID: 2914969553063523017}
   m_Layer: 0
   m_Name: circle
   m_TagString: Untagged
@@ -2525,22 +2507,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2914969553063523017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2914969553063523016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0583bdc3ab60ec24ebf16f1e3a86eb75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicManager: {fileID: 171335659}
-  speed: 5
-  oncir: 0
-  onClickValueKey: 0
 --- !u!114 &2941962008978430934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3249,7 +3215,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2447943080358142054}
   - component: {fileID: 8137843261963751906}
-  - component: {fileID: 8137843261963751907}
   m_Layer: 0
   m_Name: circle
   m_TagString: Untagged
@@ -3478,7 +3443,6 @@ GameObject:
   m_Component:
   - component: {fileID: 794310715357384697}
   - component: {fileID: 2671355715987490283}
-  - component: {fileID: 7322332447448907602}
   m_Layer: 0
   m_Name: circle
   m_TagString: Untagged
@@ -3486,22 +3450,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7322332447448907602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7322332447448907601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0583bdc3ab60ec24ebf16f1e3a86eb75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicManager: {fileID: 171335659}
-  speed: 5
-  oncir: 0
-  onClickValueKey: 0
 --- !u!114 &7423285085340866697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3706,7 +3654,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1790217804432657658}
   - component: {fileID: 7170704708322472430}
-  - component: {fileID: 1376196767}
   m_Layer: 0
   m_Name: circle
   m_TagString: Untagged
@@ -3742,7 +3689,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5099663970298247611}
   - component: {fileID: 4371840446444210717}
-  - component: {fileID: 7860503554485150884}
   m_Layer: 0
   m_Name: circle
   m_TagString: Untagged
@@ -3750,22 +3696,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7860503554485150884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7860503554485150883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0583bdc3ab60ec24ebf16f1e3a86eb75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicManager: {fileID: 171335659}
-  speed: 5
-  oncir: 0
-  onClickValueKey: 0
 --- !u!4 &8048524907917403492
 Transform:
   m_ObjectHideFlags: 0
@@ -3968,22 +3898,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8137843261963751907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6430365482096217400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0583bdc3ab60ec24ebf16f1e3a86eb75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicManager: {fileID: 171335659}
-  speed: 5
-  oncir: 0
-  onClickValueKey: 0
 --- !u!114 &8167717621787352297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4118,22 +4032,6 @@ Transform:
   m_Father: {fileID: 4157673134871409574}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8288519696118049034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748298608861795731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0583bdc3ab60ec24ebf16f1e3a86eb75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicManager: {fileID: 171335659}
-  speed: 5
-  oncir: 0
-  onClickValueKey: 0
 --- !u!224 &8858281794035942325
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4199,7 +4097,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6599728397149177297}
   - component: {fileID: 4710366337349516053}
-  - component: {fileID: 9078515642125253577}
   m_Layer: 0
   m_Name: circle
   m_TagString: Untagged
@@ -4207,22 +4104,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &9078515642125253577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9078515642125253576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0583bdc3ab60ec24ebf16f1e3a86eb75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicManager: {fileID: 171335659}
-  speed: 5
-  oncir: 0
-  onClickValueKey: 0
 --- !u!114 &9198260139434863904
 MonoBehaviour:
   m_ObjectHideFlags: 0

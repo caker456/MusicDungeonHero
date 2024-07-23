@@ -6,6 +6,7 @@ using UnityEngine;
 public class DataJson : MonoBehaviour
 {
     public string filePath = "Assets/Resources/node.json";
+    string datastring;
     void LoadJsonData()
     {
         string jsonContent = File.ReadAllText(filePath);
@@ -13,7 +14,12 @@ public class DataJson : MonoBehaviour
         foreach(ObjectData objectData in obrd.command)
         {
             Debug.Log(JsonUtility.ToJson(objectData));
+            Debug.Log(obrd.command[0]);
+            Debug.Log(JsonUtility.ToJson(obrd.command[0].Magic));
+
         }
+
+
     }
     void Start()
     {

@@ -20,7 +20,7 @@ public class Circle_Music : MonoBehaviour
             tmp = transform.parent.GetChild(0).GetComponent<TMP_Text>();
             parentnum = Int32.Parse((transform.parent.name.Substring(16, 1))) - 1;
             oncir = true;
-            cirTimer = musicManager.GetComponent<MusicManager>().musicSize[parentnum];
+           // cirTimer = musicManager.GetComponent<MusicManager>().musicSize[parentnum];
         }
         
     }
@@ -39,7 +39,11 @@ public class Circle_Music : MonoBehaviour
             {
                 KeycodeInputData();
             }
-            Debug.Log(cirTimer);
+            else
+            {
+                OverKeycode();
+            }
+      
             
             
             transform.localScale = new Vector3(cirTimer, cirTimer, 0f);
@@ -55,38 +59,48 @@ public class Circle_Music : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-    //입력값이 뭔지
+    //0~1초 사이가 아닌 나머지시간에 키를입력했다면?
+    void OverKeycode()
+    {
+            tmp.text = "X";
+            gameObject.SetActive(false);
+    }
+    //입력값이 뭔지 확인
+
+
     void KeycodeInputData()
     {
       
         if (Input.inputString != "" && Input.GetKeyDown(KeyCode.Q))
         {
             tmp.text = "Q";
-            onClickValueKey = true;
             Debug.Log("q입력");
+            gameObject.SetActive(false);
         }
         else if (Input.inputString != "" && Input.GetKeyDown(KeyCode.W))
         {
             tmp.text = "W";
-            onClickValueKey = true;
             Debug.Log("W입력");
+            gameObject.SetActive(false);
         }
         else if (Input.inputString != "" && Input.GetKeyDown(KeyCode.E))
         {
             tmp.text = "E";
-            onClickValueKey = true;
             Debug.Log("E입력");
+            gameObject.SetActive(false);
         }
         else if (Input.inputString != "" && Input.GetKeyDown(KeyCode.R))
         {
             tmp.text = "R";
-            onClickValueKey = true;
             Debug.Log("R입력");
+            gameObject.SetActive(false);
         }
         else if(Input.inputString != "")
         {
-            onClickValueKey = true;
+            tmp.text = "X";
             Debug.Log("무언가를 입력");
+            gameObject.SetActive(false);
+            
         }
     }
 }
