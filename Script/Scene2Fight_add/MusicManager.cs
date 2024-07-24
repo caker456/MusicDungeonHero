@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,22 +10,22 @@ public class MusicManager : MonoBehaviour
     [Header("뮤직 노드 싱크 크기")]
     [SerializeField] List<float> musicSize;
 
-  /*  [SerializeField]public float[] musicSize;
-        public float this[int index]
-    {
-        get {
-            return musicSize[index];
-        }
-        set {
-            musicSize[index] = value; 
-        }
-    }*/
+    /*  [SerializeField]public float[] musicSize;
+          public float this[int index]
+      {
+          get {
+              return musicSize[index];
+          }
+          set {
+              musicSize[index] = value; 
+          }
+      }*/
 
 
 
-    List<GameObject> cirList;//원형 타이밍 노드
-    List<GameObject> textCirList;//텍스트 노드
-
+    GameObject[] cirList = new GameObject[7];//원형 타이밍 노드
+    GameObject[] textCirList = new GameObject[7];//텍스트 노드
+    float[] cirTimer = new float[7];
     [SerializeField] float speed;
 
     [SerializeField] List<GameObject> soundGameObj;
@@ -34,15 +35,8 @@ public class MusicManager : MonoBehaviour
     /// <summary>
     /// 처음 노드 객체 입력
     /// </summary>
-    void cirStartListInpuit()
-    {
-        for (int x =0;x <7;x++)
-        {
-            cirList[x] = musicNodeBackground.transform.GetChild(x).GetChild(1).gameObject;
-            textCirList[x] = musicNodeBackground.transform.GetChild(x).GetChild(0).gameObject;
-        }
-    }
-    void Start()
+    
+    void Awake()
     {
         cirStartListInpuit();        
     }
@@ -53,26 +47,47 @@ public class MusicManager : MonoBehaviour
         CheckInputData();
 
     }
+    void cirStartListInpuit()
+    {
+        for (int x = 0; x < 7; x++)
+        {
+
+            cirList[x] = musicNodeBackground.transform.GetChild(x).GetChild(1).gameObject;
+            textCirList[x] = musicNodeBackground.transform.GetChild(x).GetChild(0).gameObject;
+            cirTimer[x] = musicSize[x];
+            cirList[x].transform.localScale = new Vector3(musicSize[x], musicSize[x], 0);
+        }
+    }
     /// <summary>
     /// 타이밍에 맞춰서 
     /// </summary>
     void CirScaleTimer()
     {
-        musicSize[0]
+  
+        for (int x = 0; x < 7; x++)
+        {
+            if (cirList[x].transform.localScale.x < 1)
+            {
+                cirTimer[x] -= Time.deltaTime * speed;
+                cirList[x].transform.localScale = new Vector3(cirTimer[x], cirTimer[x], 0);
+            }
+            else
+            {
+
+            }
+
+        }
+
+
         //musicSize[]
 
 
 
 
-        for (int index=0;index<7;index++)
-        {
-            if (cirList[index].transform.localScale.x<1)
-            {
 
-            }
-            
-        }
-        
+
+
+
 
 
 
